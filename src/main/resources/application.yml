@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: audit-sdk-demo
+
+# Audit SDK Configuration
+audit:
+  sdk:
+    enabled: true
+    mode: http
+    base-url: http://localhost:8081
+    timeout: 10s
+
+# Demo Configuration
+demo:
+  # Set to true to run actual publish tests against audit-log-svc
+  run-publish-tests: true
+
+# Server Configuration (for health endpoints)
+server:
+  port: 8080
+
+# Logging Configuration
+logging:
+  level:
+    root: INFO
+    ai.armada.audit: DEBUG
+  pattern:
+    console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
